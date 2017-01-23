@@ -15,7 +15,7 @@ This course provides production skills and processes for projects in Core Studio
 ###Week 1 Introduction
 **Monday In Class:** 
 * Introduction to the idea of environments and UX design for IOT 
-* In-class group exercise in understanding student needs
+* In-class group exercise in collaboration and ideation
 * Mentioning Resources we will use this class
 * Class Blog on Wordpress: Setup individual student profile
 * GitHub: class repository, clone and push
@@ -23,8 +23,11 @@ This course provides production skills and processes for projects in Core Studio
 		* https://www.lynda.com/GitHub-training-tutorials/1384-0.html
 		* https://guides.github.com/
 * Class Tutorial on google slides and GitHub
+* Overview of Bill of Materials
 	* Heroku
-	* Hardwares 
+	* Digital Ocean
+	* Amazon Web Services
+* Hardwares 
 	* Lightblue Bean
 	* Arduino Uno
 	* Raspberry Pi 3
@@ -34,7 +37,7 @@ This course provides production skills and processes for projects in Core Studio
 
 **Monday Assignment:** 
 * Reading first chapter of Designing Connected Products
-* Find 3 projects that you are interested in and inspired to and present in the next class
+* Find 3 projects(installations, interactive or immersive environments) that inspire you and present them in the next class
 * Fork the class github repository 
 **Thursday In Class:**
 * Students Present their inspirational projects in class
@@ -47,21 +50,21 @@ Make changes to the example in class post them to the class repository with a Pu
 
 
 ##Week 2 Fabrication Basics
-Monday In Class: 
+**Monday In Class:** 
 Supporting materiality intros: casting, laser cutting, plasma cutting
 How to make joints create 3d objects out of 2d materials
-Resources for fabrication 
-School laser cutting lab
-School metal shop
-School wood shop
-Canal Plastic
-Utrecht Art Store
-Monday Assignment: 
-Sign up for and attend orientation for  laser cutting, Metal Shop (CNC plasma cutter), and L3 Shop.
-Download and install Rhinoceros
-Thursday In Class:
-Lecture: Curve Drawing in Rhino
-In class studio time with Rhino
+**Resources for fabrication** 
+* Parsons laser cutting lab
+* Parsons  Metal shop and L3 Shop
+* Parsons wood shop
+* Canal Plastic
+* Utrecht Art Store
+**Monday Assignment:** 
+* Sign up for and attend orientation for  laser cutting, Metal Shop (CNC plasma cutter), and L3 Shop.
+* Download and install Rhinoceros
+**Thursday In Class:**
+* Lecture: Curve Drawing in Rhino
+* In class studio time with Rhino
 Thursday Assignment:
 Laser cut a box enclosure for your Arduino.  Etched an image on your box. You can use either acrylic or wood
 
@@ -74,7 +77,7 @@ Monday Assignment:
 Build your own a simple chat box
 Thursday In Class:
 Arduino -> server; Server to web (HTML5 canvas or paper js)
-System Diagram and Protocols
+Sstem Diagram and Protocols
 Thursday Assignment:
 Attend Mandatory Training for 3D Printing
 Build Light Controller node application that controls LEDs. 
