@@ -14,36 +14,35 @@ This course provides production skills and processes for projects in Core Studio
 
 ###Week 1 Introduction
 **Monday In Class:** 
-*Introduction to the class, teachers background, students’ background, what are they looking to learn in this class and their interests. 
-*Introduction to the idea of environments and UX design for IOT 
-*In-class group exercise in understanding student needs
-*Mentioning Resources we will use this class
-*Class Blog on Wordpress: Setup individual student profile
-*GitHub: class repository, clone and push
-	*Additional resources
-		*https://www.lynda.com/GitHub-training-tutorials/1384-0.html
-		*https://guides.github.com/
-*Class Tutorial on google slides and GitHub
-	*Heroku
-	*Hardwares 
-	*Lightblue Bean
-	*Arduino Uno
-	*Raspberry Pi 3
-	*Adafruit Feather BLE
-	*Texas Instruments Sensor Tag
-*Wearable Materials: Conductive Thread, conductive tape, neopixels, conductive fabric
+* Introduction to the idea of environments and UX design for IOT 
+* In-class group exercise in understanding student needs
+* Mentioning Resources we will use this class
+* Class Blog on Wordpress: Setup individual student profile
+* GitHub: class repository, clone and push
+	* Additional resources
+		* https://www.lynda.com/GitHub-training-tutorials/1384-0.html
+		* https://guides.github.com/
+* Class Tutorial on google slides and GitHub
+	* Heroku
+	* Hardwares 
+	* Lightblue Bean
+	* Arduino Uno
+	* Raspberry Pi 3
+	* Adafruit Feather BLE
+	* Texas Instruments Sensor Tag
+* Wearable Materials: Conductive Thread, conductive tape, neopixels, conductive fabric
 
 **Monday Assignment:** 
-Reading first chapter of Designing Connected Products
-Find 3 projects that you are interested in and inspired to and present in the next class
-Fork the class github repository 
-Thursday In Class:
-Students Present their inspirational projects in class
-Class discussion on Readings
-Github Pull Request
-Lecture on Network setup and server 
-node.js how to write a server and a local host
-Thursday Assignment:
+* Reading first chapter of Designing Connected Products
+* Find 3 projects that you are interested in and inspired to and present in the next class
+* Fork the class github repository 
+**Thursday In Class:**
+* Students Present their inspirational projects in class
+* Class discussion on Readings
+* Github Pull Request
+* Lecture on Network setup and server 
+* Understanding Node.js how to write a server and a local host
+**Thursday Assignment:**
 Make changes to the example in class post them to the class repository with a Pull request 
 
 
