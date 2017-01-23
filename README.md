@@ -39,6 +39,7 @@ This course provides production skills and processes for projects in Core Studio
 * Reading first chapter of Designing Connected Products
 * Find 3 projects(installations, interactive or immersive environments) that inspire you and present them in the next class
 * Fork the class github repository 
+* Read [The Veldt by Ray Bradbury](http://www.veddma.com/veddma/Veldt.htm) 
 **Thursday In Class:**
 * Students Present their inspirational projects in class
 * Class discussion on Readings
