@@ -6,7 +6,7 @@
 
 In order to create immmersive environments mediated with connected devices, you need a foundation in basic web development. 
 
-- 
+
 ### Git
 
 - [Try Git](https://try.github.io/levels/1/challenges/1)
