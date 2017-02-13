@@ -15,7 +15,7 @@ var mySerialPort = new SerialPort('/dev/cu.usbmodem1421', { //paste your port pa
 
 mySerialPort.on('data', function (data) {
   console.log('Data: ' + data);
-  serialVal = data;
+  //serialVal = data;
 });
 
 server.listen(port, function(){
@@ -24,9 +24,18 @@ server.listen(port, function(){
 
 io.on('connection',function(client){
 	console.log('Socket connected...');
-	client.emit('messages', {serialValue: serialVal});//inital value
+	//var lastSerialVal;
+
+	mySerialPort.on('data', function (data) {
+  		console.log('Data: ' + data);
+  		serialVal = data;
+  		client.emit('messages', {serialValue: serialVal});
+
+	});
+
+	//client.emit('messages', {serialValue: serialVal});//inital value
 	client.on('getSerialVal', function(){
-		client.emit('messages', {serialValue: serialVal});
+	 	client.emit('messages', {serialValue: serialVal});
 
 	});
 
@@ -34,7 +43,7 @@ io.on('connection',function(client){
 
 app.get('/', function(req,res){
 	console.log('serving index.html');
-	res.sendFile(__dirname + '/analogRead.html');
+	res.sendFile(__dirname + '/digitalRead.html');
 
 });
 
