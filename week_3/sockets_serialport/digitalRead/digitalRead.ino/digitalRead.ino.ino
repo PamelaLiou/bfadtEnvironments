@@ -1,19 +1,56 @@
-int switchState = 0;
-int lastSwitchState=0;
+int switchState = "off";
+int lastSwitchState="off";
+int ledPin = 2;
+int switchPin=3;
 
 void setup() {
   
   Serial.begin(9600);
   
-  pinMode(2,INPUT); // declare toggle switch
+  pinMode(ledPin,OUTPUT);
+  pinMode(switchPin,INPUT);
+
+  
   
 }
 
 void loop() {
 
-    switchState = digitalRead(2);// current state set
-     //if (lastSwitchState != switchState ){ //if the state has changed
-        Serial.println(switchState); //print the state to serial
-       // lastSwitchState = switchState; // update lastSwitchState
-//     }
+        switchState = digitalRead(switchPin);
+
+      //Serial.println(switchState);
+
+        if (switchState){
+          Serial.println("on"); //print the state to serial
+        }else{
+          Serial.println("off");
+          }
+      
+//    if(Serial.available()){
+//
+//        
+//
+//    
+//    char inByte = Serial.read();
+//    
+//    // mousedown event
+//    if(inByte=='1'){
+//      
+//    
+//      digitalWrite(ledPin, HIGH);
+//
+//    }
+//    
+//    // mouseup event
+//    else if(inByte=='0'){
+//      
+//      // send the color to the browser, then turn the LED off
+//  
+//      digitalWrite(ledPin, LOW);
+//
+//
+//    }
+//  }
+
+
 }
