@@ -24,6 +24,7 @@ canvas {
 
 	
 	socket.on('messages', function (data){
+		console.log(data);
 		radius = parseInt(data.serialValue);
 		mappedRadius = mapRange(radius, 0, 1023,10,250);
 

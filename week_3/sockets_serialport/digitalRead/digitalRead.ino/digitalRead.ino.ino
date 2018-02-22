@@ -21,9 +21,12 @@ void loop() {
       //Serial.println(switchState);
 
         if (switchState){
-          Serial.println("on"); //print the state to serial
+          Serial.print(1); //print the state to serial
+          Serial.print('b');
         }else{
-          Serial.println("off");
+          Serial.print(0);
+          Serial.print('b');
+
           }
       
 //    if(Serial.available()){

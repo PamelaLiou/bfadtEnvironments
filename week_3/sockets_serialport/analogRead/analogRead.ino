@@ -7,7 +7,8 @@ void setup() {
 }
 
 void loop() {
-  Serial.println(analogRead(potValue));
-  delay(2);
+  Serial.print(analogRead(potValue));
+  Serial.print("b");
+  delay(100);
 
 }
