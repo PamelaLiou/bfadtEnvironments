@@ -37,7 +37,7 @@ void loop() {
 //    char inByte = Serial.read();
 //    
 //    // mousedown event
-//    if(inByte=='1'){
+//    if(inByte=='1')
 //      
 //    
 //      digitalWrite(ledPin, HIGH);

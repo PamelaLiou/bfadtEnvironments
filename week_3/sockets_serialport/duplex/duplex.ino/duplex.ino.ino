@@ -1,6 +1,6 @@
 int switchState = "off";
 int lastSwitchState="off"; //
-int ledPin = 2;
+int ledPin = 12;
 int switchPin=3;
 
 void setup() {

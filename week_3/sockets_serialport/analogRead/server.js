@@ -32,20 +32,20 @@ io.on('connection',function(client){
 
 });
 
-// 
-// Basic example
-// app.get('/', function(req,res){
-// 	console.log('serving index.html');
-// 	res.sendFile(__dirname + '/analogRead.html');
-// 
-// });
 
-
-
-// L-system example
+//Basic example
 app.get('/', function(req,res){
-	console.log('serving lsystems.html');
-	res.sendFile(__dirname + '/lsystems.html');
+	console.log('serving index.html');
+	res.sendFile(__dirname + '/analogRead.html');
 
 });
+
+
+
+// // L-system example
+// app.get('/', function(req,res){
+// 	console.log('serving lsystems.html');
+// 	res.sendFile(__dirname + '/lsystems.html');
+
+// });
 

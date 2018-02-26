@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "express": "4.13.4",
-    "socket.io": "^1.7.2",
-    "serialport": "*"
+    "express": "^4.13.4",
+    "serialport": "*",
+    "socket.io": "^1.7.4"
   },
   "scripts": {
     "start": "node app.js"

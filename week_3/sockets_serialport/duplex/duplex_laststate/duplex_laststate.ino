@@ -1,6 +1,6 @@
 int switchState =0;
 int lastSwitchState=0;
-int ledPin = 2;
+int ledPin = 12;
 int switchPin = 3;
 
 void setup() {
@@ -22,9 +22,11 @@ void loop() {
 
   if (switchState != lastSwitchState) {
     if (switchState) {
-      Serial.println("on"); //print the state to serial
+      Serial.print("on");//print the state to serial
+      Serial.print("b");
     } else {
-      Serial.println("off");
+      Serial.print("off");
+      Serial.print("b");
     }
   }
 
