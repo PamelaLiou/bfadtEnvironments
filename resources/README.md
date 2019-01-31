@@ -13,8 +13,13 @@ In order to create immmersive environments mediated with connected devices, you 
 
 ### HTML / CSS
 - [Don't Fear the Internet](http://www.dontfeartheinternet.com/02-html/)
-- [CSS Box Model](https://css-tricks.com/the-css-box-model/)
 - [Mozilla- Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
+
+### CSS DeepDive
+- [CSS Box Model- Internet is hard](https://internetingishard.com/html-and-css/css-box-model/)
+- [CSS Box Model](https://css-tricks.com/the-css-box-model/)
+- [CSS FlexBox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
 
 ### HTML5
 
