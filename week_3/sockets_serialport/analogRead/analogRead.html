@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- Canvas animation based on https://www.kirupa.com/snippets/examples/simple_canvas_animation.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AnalogRead Example</title>
+<style>
+canvas {
+	border: 3px #CCC solid;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+    <canvas id="myCanvas" height="450" width="450"></canvas>
+</div>
+
+<script src = "/socket.io/socket.io.js"></script>
+<script> 
+	var socket = io.connect('http://localhost:8080');
+	var radius;
+	var mappedRadius;
+
+
+
+	
+	socket.on('messages', function (data){
+		console.log(data);
+		radius = parseInt(data.serialValue);
+		mappedRadius = mapRange(radius, 0, 1023,10,225);
+
+
+	});
+
+
+
+		var mainCanvas = document.getElementById("myCanvas");
+		var mainContext = mainCanvas.getContext('2d');
+		
+		var canvasWidth = mainCanvas.width;
+		var canvasHeight = mainCanvas.height;
+		
+		var angle = 0;
+		
+		var requestAnimationFrame = window.requestAnimationFrame || 
+									window.mozRequestAnimationFrame || 
+									window.webkitRequestAnimationFrame || 
+									window.msRequestAnimationFrame;
+
+
+		var mapRange = function(value, low1, high1, low2, high2) {
+    		return Math.round(low2 + (high2 - low2) * (value - low1) / (high1 - low1));
+		} //same as the map function in Processing. Use this to remap a value from one range to another. 
+
+
+		
+		function drawCircle() {
+
+			mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
+			socket.emit('getSerialVal');
+			//console.log(mappedRadius);
+
+			
+			// color in the background
+			mainContext.fillStyle = "#EEEEEE";
+			mainContext.fillRect(0, 0, canvasWidth, canvasHeight);
+			
+			// draw the circle
+			mainContext.beginPath();
+			
+			mainContext.arc(225, 225, mappedRadius, 0, Math.PI * 2, false);
+			mainContext.closePath();
+			
+			// color in the circle
+			mainContext.fillStyle = "#006699";
+			mainContext.fill();
+			 
+			angle += Math.PI / 64;
+			
+			requestAnimationFrame(drawCircle);
+		}
+
+
+
+		drawCircle();
+    </script>
+
+
+</body></html>

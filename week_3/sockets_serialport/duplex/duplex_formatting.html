@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>AnalogRead Example</title>
+	<style>
+		canvas {
+		border: 3px #CCC solid;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+	</div>
+
+<script src = "/socket.io/socket.io.js"></script>
+<script> 
+	var socket = io.connect('http://localhost:8080');
+	var switchState= "off";
+	var lastSwitchState= "off";
+
+
+	 socket.on('initialMessage', function (data){
+		 		
+		 		window.onmousedown = function(){
+								socket.emit('1');
+								console.log('1');
+				}
+						// this event fires when we release our mouse
+				window.onmouseup = function(){
+							socket.emit('0');
+							console.log('0');
+
+				}
+
+		 });
+	
+	socket.on('messages', function (data){
+	
+		digitalRead = data.serialValue;
+
+		if (digitalRead != lastSwitchState){
+			console.log(digitalRead);
+			document.getElementById("container").innerHTML = digitalRead;
+
+
+		}
+
+
+
+
+		
+		lastSwitchState = digitalRead;
+
+
+		socket.emit('getSerialVal'); 
+
+	});
+
+
+
+		// if (digitalRead = "off"){
+		// 	//console.log("off");
+		// 	document.getElementById("container").innerHTML = "OFF";
+		// }else if(digitalRead = "on"){
+		// 	//console.log("on");
+
+		// 	document.getElementById("container").innerHTML = "ON";
+		// }
+
+    </script>
+
+
+</body></html>
