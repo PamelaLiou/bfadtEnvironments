@@ -98,27 +98,22 @@ Make a change in your local repository (any change), push the change to github, 
 Before and After: write a short blog post about a process before and after the advent of the internet. How did people pay their bills? Invoice clients? Try on shoes? Detail the evolution of how the internet changed these processes. 
 
 Thursday 1/31 In Class:
-Online Subcultures. End user research 
-In-class exercise identifying communities
-Work in class on reviewing Servers
+- HTML review
+- text based communities and decision trees
+
 Thursday 1/31 Assignment:
-Watch Lynda Programming Foundations 
-Chapter 1. Internet Basics
-Choose online community. 
+Create a hyperlink Choose-Your-Own-Adventure story using linked HTML pages. 
+The prompt: A character caught between two worlds, paradigm shift, or transformative event. 
+
+Monday 2/4 lecture:
+Digital communities. 
+
+Monday 2/4 Assignment:
+
 Prototype the UI/UX of a social platform to serve that particular community, post assignment to class blog. 
 What are the unique needs of your community? Privacy/convenience? Accessibility vs. Anonymity?
 How are different behaviors incentivized?
 Anticipate unintended consequences of design decisions
-
-
-
-
-Week 3  Front End  Development Basics, HTML/CSS
-
-Monday 2/4 In Class:
-HTML/ CSS Lecture: the fundamentals of displaying information
-
-Monday 2/4 Assignment:
 Build a simple website for the digital community you researched based on the previous assignment. 
 Focus on the flow of the interface and less on styling/ branding
 
