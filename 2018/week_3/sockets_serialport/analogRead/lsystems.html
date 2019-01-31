@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>L-System</title>
+        
+    </head>
+
+    <body onload="setup()">
+        <canvas id="canvas" width="1280px" height="720px" style="border: 1px solid black"></canvas>
+    </body>
+
+
+
+
+<script src = "/socket.io/socket.io.js"></script>
+<script> 
+    var socket = io.connect('http://localhost:8080');
+    var radius;
+    var mappedRadius;
+    
+    socket.on('messages', function (data){
+        console.log(data);
+        radius = parseInt(data.serialValue);
+        mappedAngle = mapRange(radius, 0, 1023,1,10);
+
+
+    });
+
+    var canvas = document.getElementById('canvas');
+
+                var dragonCurve = Lindenmayer.createLSystem({
+                    seed: 'XY',
+                    rules: {
+                        'X': 'X+YF',
+                        'Y': 'FX-Y'
+                    },
+                    canvas: canvas,
+                    angle: 90
+                });
+
+                dragonCurve.iterate(mappedAngle);
+                dragonCurve.render();
+
+
+
+
+        function mapRange(value, low1, high1, low2, high2) {
+            return Math.round(low2 + (high2 - low2) * (value - low1) / (high1 - low1));
+        } //same as the map function in Processing. Use this to remap a value from one range to another. 
+
+
+    </script>
+    <script src="lindenmayer.js"></script>
+    <script>
+            function setup() {
+                var canvas = document.getElementById('canvas');
+
+                var plant = Lindenmayer.createLSystem({
+                    seed: 'X',
+                    rules: {
+                        'X': 'F-[[X]+X]+F[+FX]-X',
+                        'F': 'FF'
+                    },
+                    canvas: canvas,
+                    angle: 25,
+                    initialAngle: 270,
+                    width: 512,
+                    height: 512,
+                    x: 0,
+                    y: 0
+                });
+
+                var dragonCurve = Lindenmayer.createLSystem({
+                    seed: 'XY',
+                    rules: {
+                        'X': 'X+YF',
+                        'Y': 'FX-Y'
+                    },
+                    canvas: canvas,
+                    angle: 90
+                });
+
+                var kochCurve = Lindenmayer.createLSystem({
+                    seed: 'F',
+                    rules: {
+                        'F': 'F-F+F+F-FB'
+                    },
+                    canvas: canvas,
+                    angle: 90
+                });
+
+                var sierpinskiTriangle = Lindenmayer.createLSystem({
+                    seed: 'A',
+                    rules: {
+                        'A': 'B-A-B',
+                        'B': 'A+B+A'
+                    },
+                    constants: ['A', 'B'],
+                    canvas: canvas,
+                    angle: 60,
+                    color: '#0000ff'
+                });
+
+                for ( var i = 0; i < 8; i++) {
+                    plant.iterate();
+                }
+
+                dragonCurve.iterate(12);
+
+                kochCurve.iterate(5);
+
+                sierpinskiTriangle.iterate(9);
+
+                //plant.render();
+                dragonCurve.render();
+                //kochCurve.render();
+                //sierpinskiTriangle.render();
+
+            };
+        </script>
+
+
+
+</html>
